@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -20552,7 +20552,7 @@
 <smd name="P$1" x="0" y="0" dx="3" dy="2" layer="1"/>
 </package>
 <package name="BANANA">
-<pad name="P1" x="0" y="0" drill="4.1" diameter="7"/>
+<pad name="P1" x="0" y="0" drill="4.9" diameter="8"/>
 <text x="-3.81" y="-8.89" size="1.27" layer="28" ratio="12">&gt;VALUE</text>
 <text x="-2.54" y="7.62" size="1.27" layer="25" ratio="12">&gt;NAME</text>
 <circle x="0" y="0" radius="6.35" width="0.254" layer="21"/>
@@ -26456,6 +26456,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 </symbol>
+<symbol name="NULL">
+<pin name="NC" x="-2.54" y="0" length="short"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FMC_LOG">
@@ -29236,6 +29241,20 @@ for power line</description>
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="NULL">
+<gates>
+<gate name="G$1" symbol="NULL" x="5.08" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name="">
+<attribute name="_EXTERNAL_" value="NULL" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
